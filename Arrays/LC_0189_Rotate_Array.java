@@ -27,23 +27,50 @@ Key Learning:
 
 ========================================
 */
-public class LC_0189_Rotate_Array {
+ class LC_0189_Rotate_Array {
+    // This method takes extra space that increse space complexity
+
     public static void rotate(int[] arr, int k){
+        
         int n = arr.length;
-        k = k%n;
+        k = k % n;
+        
         int[] F = new int[n];
+        
         for(int i=0; i<n; i++){
             F[(i+k) % n] = arr[i];
         }
+        
         for(int i=0; i<n; i++){
             arr[i] = F[i];
         }
     }
+    public static void rotateWithoutExtraSpace(int[] arr, int k){
+        
+        int n = arr.length;
+        k = k % n;
 
+        reverse(arr, 0, n-1);
+        reverse(arr, 0, k-1);
+        reverse(arr, k, n-1);
+    }
+
+    public static void reverse(int[] arr, int left, int right){
+
+        while (left < right) {
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            
+            left++;
+            right--;
+        }
+    }
+    
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7};
 
-        rotate(arr, 4);
+        rotateWithoutExtraSpace(arr, 3);
         for(int n: arr){
             System.out.print(n + ", ");
         }
