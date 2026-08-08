@@ -35,7 +35,7 @@ Key Learning:
 import java.util.TreeSet;
 
 public class LC_0220_Contains_Duplicate_III {
-    public static boolean Solution(int[] nums, int indexDiff, int valueDiff){
+    public static boolean solution(int[] nums, int indexDiff, int valueDiff){
         
         TreeSet<Long> set = new TreeSet<>();
 
