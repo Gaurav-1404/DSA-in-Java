@@ -65,7 +65,7 @@ public class LC_0220_Contains_Duplicate_III {
         int indexDiff = 3;
         int valueDiff = 0;
 
-        boolean ans = Solution(arr, indexDiff, valueDiff);
+        boolean ans = solution(arr, indexDiff, valueDiff);
 
         if(ans){
             System.out.println("It contains Duplicate value with conditions");
