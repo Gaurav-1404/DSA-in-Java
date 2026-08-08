@@ -35,7 +35,7 @@ Key Learning:
 */
 public class LC_0219_Contains_DuplicateII {
 
-    public boolean containsNearbyDuplicate(int[] nums, int k) {
+    public static boolean containsNearbyDuplicate(int[] nums, int k) {
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
@@ -51,5 +51,14 @@ public class LC_0219_Contains_DuplicateII {
             map.put(nums[i], i);
         }
         return false;
+    }
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,1};
+
+        if(containsNearbyDuplicate(arr, 3)){
+            System.out.println("Array have duplicate with the given conditions.");
+        }else{
+            System.out.println("Array have not any such duplicate that fullfill condition");
+        }
     }
 }
