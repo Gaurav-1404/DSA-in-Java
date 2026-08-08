@@ -35,7 +35,7 @@ Key Learning:
 
 ========================================
 */
-public class LC_88_Sort_Colour {
+public class LC_0075_Sort_Colour {
 
     public static void sort(int arr[]){
         int l = 0;
