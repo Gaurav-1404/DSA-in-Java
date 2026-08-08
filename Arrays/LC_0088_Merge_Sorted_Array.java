@@ -27,7 +27,7 @@ Key Learning:
 
 ========================================
 */
-public class LC_88_Merge_Sorted_Array {
+public class LC_0088_Merge_Sorted_Array {
     public static void merge(int[] arr1, int m, int[] arr2, int n){
         int l1 = m-1;
         int l2 = n-1;
