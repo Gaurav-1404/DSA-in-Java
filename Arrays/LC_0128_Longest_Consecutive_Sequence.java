@@ -13,7 +13,7 @@ public class LC_0128_Longest_Consecutive_Sequence {
         for(int num: nums){
             set.add(num);
         }
-        for(int num: nums){
+        for(int num: set){
             int current = num;
             int count = 1;
 
